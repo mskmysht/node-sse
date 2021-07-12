@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
 });
 
 // server-sent event stream
-app.ws('/hoge', (ws, req) => {
+app.ws('/', (ws, req) => {
   const stream = websocketStream(ws, { binary: true });
   sp.pipe(stream);
 });
 
-app.listen(3000);
+app.listen(9001);
